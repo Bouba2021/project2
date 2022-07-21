@@ -163,14 +163,15 @@
   127  cd dw
   128  cd dev2/
   129  ls -ltr
-  130  git clone git@github.com:july2022p/project2.git
+  130  git clone git@github.com:Bouba2021/project2.git
   131  ls -ltr
   132  cd project2/
   133  ls -ltr
-  134  virtualenv -p /usr/bin/python3.7 venv
-  135  source venv/bin/activate
-  136  pip freeze
+  134  virtualenv -p /usr/bin/python3.7 venv ################### Execute the cmd to create your venv
+  135  source venv/bin/activate ################################ Execute thecmd to activate your venv
+  136  pip freeze ############################################## At this level, there'll no be 3rd party modules and libs installed
   137  ls -ltr
-  138  pip install -r requirement.txt
-  139  pip freeze
+  138  pip install -r requirement.txt ######################### Execute this cmd to run what is in the requirement.txt
+  139  pip freeze ############################################# Execute this cmd to see the 3rd party modules and libs installed in your venv
+  140  deactivate ############################################# To leave your venv
   140  history
