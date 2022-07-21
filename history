@@ -33,25 +33,25 @@
    32  chmod 755 a1.py 
    33  ./a1.py 
    34  which python3
-   35  which python3.7
+   35  which python3.7 #################################################### Gives you the location of the binaries (/usr/local/bin/python3.7)
    36  vi a1.py
    37  ./a1.py 
    38  cat a1.py 
    39  python
    40  python3.8
    41  ls -ltr
-   42  pip freeze
+   42  pip freeze ######################################################## To install any 3rd librairies or modules in python
    43  sudo yum install python3-pip
    44  sudo yum install python3.7-pip
-   45  wget https://bootstrap.pypa.io/get-pip.py
+   45  wget https://bootstrap.pypa.io/get-pip.py ######################## To install pip
    46  ls -ltr
-   47  sudo python get-pip.py
+   47  sudo python get-pip.py ########################################### The installation will fail bc you're using the default python version
    48  python -V
    49  python3 -V
    50  python3.7 -V
    51  python3.8 -V
-   52  sudo python3.7 get-pip.py 
-   53  pip freeze
+   52  sudo python3.7 get-pip.py ####################################### Will install pip bc the version is 3.7 or higher 
+   53  pip freeze ###################################################### Run this cmd to see the 3rd party modules installed
    54  pip3.10 freeze
    55  pip3.7 freeze
    56  pip --version
@@ -59,48 +59,69 @@
    58  pip3.10 --version
    59  sudo pip install azure
    60  sudo pip3 install azure
-   61  pip3 install azure
-   62  pip3 install azure-mgmt-compute
+   61  pip3 install azure ############################################# To install azure or any other 3rd party modules go to: pypi.org
+   62  pip3 install azure-mgmt-compute ################################ To install azure or any other 3rd party modules go to: pypi.org
    63  pip freeze
-   64  pip install virtualenv
+   
+   #####################################################################################################################################################
+   ################################################# SETTING UP YOUR VIRTUAL ENVIRONMENT ###############################################################
+   #####################################################################################################################################################
+   
+   64  pip install virtualenv ######################################## To install your venv
    65  mkdir project1
    66  cd project1/
    67  ls -ltr
    68  pwd
-   69  whichi python
-   70  python -V
+   69  which python ################################################# To see the location or binaries path
+   70  python -V #################################################### To know the version of python you are dealing with
    71  which python
-   72  virtualenv -p /usr/bin/python venv
-   73  /usr/bin/python -V
-   74  ls -la
-   75  source venv/bin/activate
-   76  python -V
+   72  virtualenv -p /usr/bin/python venv ########################## Create the venv base on the python version you want to work on. venv will be created on specified path
+   73  /usr/bin/python -V ########################################## To see the version of the binaries you're on currently
+   74  ls -la ###################################################### You'll see a folder/directory called venv
+   75  source venv/bin/activate #################################### Activate your venv (Look at your prone, it change to venv)
+   76  python -V ################################################### To let you know which python version is currently running in your venv
    77  pip frreze
-   78  pip freeze
-   79  pip install boto3
-   80  pip freeze
-   81  deactivate 
-   82  pip freeze
+   78  pip freeze ################################################## At this level, there will not be a 3rd party modules installed in your venv
+   79  pip install boto3 ########################################### AWS SDK thru which you can use modules and create resources on AWS
+   80  pip freeze ################################################## Now you can see the boto3 libraries and modules installed in your venv
+   81  deactivate ################################################## To leave the venv, execute deactive (take a look a the command prone) 
+   82  pip freeze ################################################## At this level, you'll not see any boto3 installed bc whatever is installed in venv stays there.
+   
+   ###################################################################################################################################################################
+   ###################################################### START A DIFFERENT PROJECT WITH DIFFERENT VERSION OF PYTHON##################################################
+   ###################################################################################################################################################################
+   
    83  cd ../
    84  mkdir project2
    85  cd project2
    86  ls -lrt
-   87  python3.7 -V
-   88  which python3.7
-   89  virtualenv -p /usr/bin/python3.7 venv
-   90  source venv/bin/activate
+   87  python3.7 -V ############################################## Get the version of python
+   88  which python3.7 ########################################### Get the binaries location
+   89  virtualenv -p /usr/bin/python3.7 venv ##################### Create your venv base on the python version you want to work on. venv will be created on specified path
+   90  source venv/bin/activate ################################## Activate your venv
    91  pip frreze
-   92  pip freeze
-   93  python -V
-   94  pip install boto3
-   95  pip freeze
+   92  pip freeze ################################################ At this level, there is no 3rd party modules or libs installed
+   93  python -V ################################################# To know the version of the python is running in your venv NOT at the level of your OS
+   94  pip install boto3 ######################################### To install 3rd party libs and modules
+   95  pip freeze ################################################ To see the installed 3rd party modules and libs
+   
+   ###################################################################################################################################################################
+   ############################# With time, version changes and it's a lot of job to always intall the current version.###############################################
+   ############################# and save them in a requirement.txt file that'll be shared to another developper       ##############################################
+   ###################################################################################################################################################################
+   
    96  pip freeze > requirement.txt
    97  ls -ltr
    98  cat requirement.txt
    99  deactivate 
   100  l s-ltr
   101  ls -ltr
-  102  mkdir /tmp/project2
+  
+  
+  
+  102  mkdir /tmp/project2 
+  
+  *************************************************************************************************************************************
   103  vi README.md
   104  ls -ltr
   105  ssh-keygen
@@ -122,8 +143,7 @@
   121  git log
   
   
-  
-  *****************************************
+
   
   
   
@@ -131,7 +151,15 @@
   123  git push -u origin master
   124  cd 
   125  ls -ltr
-  126  mkdir dev2
+  ************************************************************************************************************************************************
+  
+  #####################################################################################################################################################################
+  ############################################### Let's work with the requirement.txt file#############################################################################
+  #####################################################################################################################################################################
+  
+  
+  NOTE: Imagine you are developper2 and you want to create a venv to work on this repo by following what is under the requirement.txt > This is how you'd do:
+  126  mkdir dev2 ############################################## You create a directory
   127  cd dw
   128  cd dev2/
   129  ls -ltr
