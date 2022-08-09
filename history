@@ -175,3 +175,18 @@
   139  pip freeze ############################################# Execute this cmd to see the 3rd party modules and libs installed in your venv
   140  deactivate ############################################# To leave your venv
   140  history
+
+
+  ##################################################################################################################################################################
+  ######################################## CREATE YOUR VENV ON WIDOWS##############################################################################################
+  
+  - Create your folder Ex: CohortPython(Project name)
+  - You can open it with git bash here or open your terminal and cd into that directory
+  - Run: python -V
+  - Run: which python - to see the location of the python binaries
+  - Run: pip install virtualenv
+  - Create your virtual env: virtualenv -p /usr/bin/python venv (If the command fail to execute, run the command below)
+  - Run python -m venv venv (This will create your venv)
+  - Go to your code editor (Vscode) - Create a py file, open it in intergrated terminal and answer the question by clicking A
+  
+  
