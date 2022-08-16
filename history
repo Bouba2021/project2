@@ -188,5 +188,7 @@
   - Create your virtual env: virtualenv -p /usr/bin/python venv (If the command fail to execute, run the command below)
   - Run python -m venv venv (This will create your venv)
   - Go to your code editor (Vscode) - Create a py file, open it in intergrated terminal and answer the question by clicking A
+  To activate your venv, far down below on your right, there is a tab. click on your python version and look up then click on recommended.
+  Run exit then click on the folder created above and select open it in intergrated terminal and from here, the cmd will be different.
   
   
