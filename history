@@ -191,4 +191,10 @@
   To activate your venv, far down below on your right, there is a tab. click on your python version and look up then click on recommended.
   Run exit then click on the folder created above and select open it in intergrated terminal and from here, the cmd will be different.
   
+  ################################################################################################################################################################
+############################################# HOW TO USE PYTHON INTERPRETOR(FOR TESTING PURPOSE)#################################################################
+
+- On your command prone, run python3 and you'll directed to the python interpretor
+- To exit the python interpretor, simply run exit()
+  
   
